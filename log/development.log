@@ -31968,3 +31968,951 @@ Started GET "/assets/icons.svg" for 127.0.0.1 at 2014-04-17 14:32:18 -0300
 
 
 Started GET "/assets/icons.woff" for 127.0.0.1 at 2014-04-17 14:32:18 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (101.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.0ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+
+Started GET "/" for 127.0.0.1 at 2014-04-23 14:45:06 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/temp (15.0ms)
+Completed 200 OK in 3747ms (Views: 3716.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/semantic.css?body=1" for 127.0.0.1 at 2014-04-23 14:45:10 -0300
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2014-04-23 14:45:10 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-23 14:45:10 -0300
+
+
+Started GET "/assets/script.js?body=1" for 127.0.0.1 at 2014-04-23 14:45:10 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-23 14:45:10 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-23 14:45:10 -0300
+
+
+Started GET "/assets/semantic.js?body=1" for 127.0.0.1 at 2014-04-23 14:45:11 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-23 14:45:11 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-23 14:45:11 -0300
+
+
+Started GET "/assets/icons.svg" for 127.0.0.1 at 2014-04-23 14:45:11 -0300
+
+
+Started GET "/assets/icons.woff" for 127.0.0.1 at 2014-04-23 14:45:11 -0300
+
+
+Started POST "/sessions" for 127.0.0.1 at 2014-04-23 14:45:15 -0300
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"cRZCGClsFeks+8KGV0r+68c0B3HDp6FNnyY7pOZ6xwA=", "user"=>{"email"=>"jalvesteixeira@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[35mUser Load (61.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."email" = 'jalvesteixeira@gmail.com' LIMIT 1
+Redirected to http://localhost:3000/me
+Completed 302 Found in 240ms (ActiveRecord: 63.0ms)
+
+
+Started GET "/me" for 127.0.0.1 at 2014-04-23 14:45:15 -0300
+Processing by UsersController#me as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 10]]
+  [1m[35mProfile Load (43.0ms)[0m  SELECT  "profiles".* FROM "profiles"  WHERE "profiles"."user_id" = $1  ORDER BY "profiles"."id" ASC LIMIT 1  [["user_id", 10]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 10]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 10]]
+  [1m[36mCompany Load (88.0ms)[0m  [1mSELECT  "companies".* FROM "companies"  WHERE "companies"."user_id" = $1  ORDER BY "companies"."id" ASC LIMIT 1[0m  [["user_id", 10]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 10]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 10]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "companies".* FROM "companies"  WHERE "companies"."user_id" = $1  ORDER BY "companies"."id" ASC LIMIT 1  [["user_id", 10]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 10]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 10]]
+  Rendered shared/_sidebar.html.erb (360.0ms)
+  Rendered users/me.html.erb within layouts/temp (395.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 10]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 10]]
+Completed 200 OK in 458ms (Views: 320.0ms | ActiveRecord: 137.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-23 14:45:16 -0300
+
+
+Started GET "/assets/semantic.css?body=1" for 127.0.0.1 at 2014-04-23 14:45:16 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-23 14:45:16 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-23 14:45:16 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-23 14:45:16 -0300
+
+
+Started GET "/assets/semantic.js?body=1" for 127.0.0.1 at 2014-04-23 14:45:16 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-23 14:45:16 -0300
+
+
+Started GET "/assets/icons.svg" for 127.0.0.1 at 2014-04-23 14:45:16 -0300
+
+
+Started GET "/assets/icons.woff" for 127.0.0.1 at 2014-04-23 14:45:16 -0300
+
+
+Started GET "/profiles/7/edit" for 127.0.0.1 at 2014-04-23 14:45:34 -0300
+Processing by ProfilesController#edit as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 10]]
+  [1m[35mProfile Load (0.0ms)[0m  SELECT  "profiles".* FROM "profiles"  WHERE "profiles"."user_id" = $1  ORDER BY "profiles"."id" ASC LIMIT 1  [["user_id", 10]]
+  [1m[36mProfile Load (0.0ms)[0m  [1mSELECT  "profiles".* FROM "profiles"  WHERE "profiles"."id" = $1 LIMIT 1[0m  [["id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 10]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "profiles".* FROM "profiles"  WHERE "profiles"."user_id" = $1  ORDER BY "profiles"."id" ASC LIMIT 1[0m  [["user_id", 10]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 10]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 10]]
+  [1m[35mCompany Load (1.0ms)[0m  SELECT  "companies".* FROM "companies"  WHERE "companies"."user_id" = $1  ORDER BY "companies"."id" ASC LIMIT 1  [["user_id", 10]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 10]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 10]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "companies".* FROM "companies"  WHERE "companies"."user_id" = $1  ORDER BY "companies"."id" ASC LIMIT 1[0m  [["user_id", 10]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 10]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 10]]
+  Rendered shared/_sidebar.html.erb (78.0ms)
+  Rendered profiles/edit.html.erb within layouts/temp (114.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 10]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 10]]
+Completed 200 OK in 202ms (Views: 157.0ms | ActiveRecord: 1.0ms)
+
+
+Started DELETE "/sessions/destroy" for 127.0.0.1 at 2014-04-23 14:45:38 -0300
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"cRZCGClsFeks+8KGV0r+68c0B3HDp6FNnyY7pOZ6xwA=", "id"=>"destroy"}
+Redirected to http://localhost:3000/me
+Completed 302 Found in 5ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/me" for 127.0.0.1 at 2014-04-23 14:45:38 -0300
+Processing by UsersController#me as HTML
+Redirected to http://localhost:3000/sessions/new
+Filter chain halted as :authorize rendered or redirected
+Completed 302 Found in 18ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/sessions/new" for 127.0.0.1 at 2014-04-23 14:45:38 -0300
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/temp (0.0ms)
+Completed 200 OK in 24ms (Views: 22.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-23 14:45:38 -0300
+
+
+Started GET "/assets/semantic.css?body=1" for 127.0.0.1 at 2014-04-23 14:45:38 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-23 14:45:38 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-23 14:45:38 -0300
+
+
+Started GET "/assets/semantic.js?body=1" for 127.0.0.1 at 2014-04-23 14:45:38 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-23 14:45:38 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-23 14:45:38 -0300
+
+
+Started GET "/assets/icons.svg" for 127.0.0.1 at 2014-04-23 14:45:38 -0300
+
+
+Started GET "/assets/icons.woff" for 127.0.0.1 at 2014-04-23 14:45:38 -0300
+
+
+Started POST "/sessions" for 127.0.0.1 at 2014-04-23 14:45:47 -0300
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"mnwNnWaoWm8Wr1ThiVuvvPnt0S87OpjS81jLnDHLqn8=", "user"=>{"email"=>"jalvesteixeira@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."email" = 'jalvesteixeira@gmail.com' LIMIT 1
+Redirected to http://localhost:3000/me
+Completed 302 Found in 96ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/me" for 127.0.0.1 at 2014-04-23 14:45:47 -0300
+Processing by UsersController#me as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 10]]
+  [1m[35mProfile Load (0.0ms)[0m  SELECT  "profiles".* FROM "profiles"  WHERE "profiles"."user_id" = $1  ORDER BY "profiles"."id" ASC LIMIT 1  [["user_id", 10]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 10]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 10]]
+  [1m[36mCompany Load (1.0ms)[0m  [1mSELECT  "companies".* FROM "companies"  WHERE "companies"."user_id" = $1  ORDER BY "companies"."id" ASC LIMIT 1[0m  [["user_id", 10]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 10]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 10]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "companies".* FROM "companies"  WHERE "companies"."user_id" = $1  ORDER BY "companies"."id" ASC LIMIT 1  [["user_id", 10]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 10]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 10]]
+  Rendered shared/_sidebar.html.erb (89.0ms)
+  Rendered users/me.html.erb within layouts/temp (95.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 10]]
+  [1m[35mCACHE (1.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 10]]
+Completed 200 OK in 138ms (Views: 135.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/semantic.css?body=1" for 127.0.0.1 at 2014-04-23 14:45:47 -0300
+
+
+Started GET "/assets/semantic.js?body=1" for 127.0.0.1 at 2014-04-23 14:45:47 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-23 14:45:47 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-23 14:45:47 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-23 14:45:47 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-23 14:45:47 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-23 14:45:47 -0300
+
+
+Started GET "/assets/icons.svg" for 127.0.0.1 at 2014-04-23 14:45:47 -0300
+
+
+Started GET "/assets/icons.woff" for 127.0.0.1 at 2014-04-23 14:45:47 -0300
+
+
+Started DELETE "/sessions/destroy" for 127.0.0.1 at 2014-04-23 14:45:52 -0300
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"mnwNnWaoWm8Wr1ThiVuvvPnt0S87OpjS81jLnDHLqn8=", "id"=>"destroy"}
+Redirected to http://localhost:3000/me
+Completed 302 Found in 5ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/me" for 127.0.0.1 at 2014-04-23 14:45:52 -0300
+Processing by UsersController#me as HTML
+Redirected to http://localhost:3000/sessions/new
+Filter chain halted as :authorize rendered or redirected
+Completed 302 Found in 12ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/sessions/new" for 127.0.0.1 at 2014-04-23 14:45:52 -0300
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/temp (1.0ms)
+Completed 200 OK in 22ms (Views: 22.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/semantic.css?body=1" for 127.0.0.1 at 2014-04-23 14:45:52 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-23 14:45:52 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-23 14:45:52 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-23 14:45:52 -0300
+
+
+Started GET "/assets/semantic.js?body=1" for 127.0.0.1 at 2014-04-23 14:45:52 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-23 14:45:52 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-23 14:45:52 -0300
+
+
+Started GET "/assets/icons.svg" for 127.0.0.1 at 2014-04-23 14:45:52 -0300
+
+
+Started GET "/assets/icons.woff" for 127.0.0.1 at 2014-04-23 14:45:52 -0300
+
+
+Started GET "/registrations/new" for 127.0.0.1 at 2014-04-23 14:45:54 -0300
+Processing by RegistrationsController#new as HTML
+  Rendered registrations/new.html.erb within layouts/temp (1.0ms)
+Completed 200 OK in 12ms (Views: 12.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/registrations" for 127.0.0.1 at 2014-04-23 14:46:06 -0300
+Processing by RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"U6QlC/E8b9XzUIOJQTSgFr68VQIa9K6ZNHnYMZVyH4Y=", "profile"=>{"first_name"=>"João", "last_name"=>"Teixeira"}, "user"=>{"email"=>"jotape@f451.com.br", "password"=>"[FILTERED]", "recipe"=>"candidate"}}
+  [1m[36m (15.0ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.0ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = 'jotape@f451.com.br' LIMIT 1
+  [1m[36mSQL (75.0ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "password", "recipe", "salt", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["created_at", "2014-04-23 17:46:06.770610"], ["email", "jotape@f451.com.br"], ["password", "$2a$10$72XSePSxbuqtCQZnM8Rm1e/tveoHxDzArU8uIPvXbo/hgmu9QdDKO"], ["recipe", "candidate"], ["salt", "$2a$10$72XSePSxbuqtCQZnM8Rm1e"], ["updated_at", "2014-04-23 17:46:06.770610"]]
+  [1m[35m (19.0ms)[0m  COMMIT
+  [1m[36m (1.0ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (7.0ms)[0m  INSERT INTO "profiles" ("created_at", "first_name", "last_name", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-04-23 17:46:06.873616"], ["first_name", "João"], ["last_name", "Teixeira"], ["updated_at", "2014-04-23 17:46:06.873616"], ["user_id", 11]]
+  [1m[36m (1.0ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/sessions/new
+Completed 302 Found in 325ms (ActiveRecord: 118.0ms)
+
+
+Started GET "/sessions/new" for 127.0.0.1 at 2014-04-23 14:46:06 -0300
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/temp (0.0ms)
+Completed 200 OK in 16ms (Views: 15.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-23 14:46:07 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-23 14:46:07 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-23 14:46:07 -0300
+
+
+Started GET "/assets/semantic.css?body=1" for 127.0.0.1 at 2014-04-23 14:46:07 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-23 14:46:07 -0300
+
+
+Started GET "/assets/semantic.js?body=1" for 127.0.0.1 at 2014-04-23 14:46:07 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-23 14:46:07 -0300
+
+
+Started GET "/assets/icons.svg" for 127.0.0.1 at 2014-04-23 14:46:07 -0300
+
+
+Started GET "/assets/icons.woff" for 127.0.0.1 at 2014-04-23 14:46:07 -0300
+
+
+Started POST "/sessions" for 127.0.0.1 at 2014-04-23 14:46:12 -0300
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"U6QlC/E8b9XzUIOJQTSgFr68VQIa9K6ZNHnYMZVyH4Y=", "user"=>{"email"=>"jotape@f451.com.br", "password"=>"[FILTERED]"}}
+  [1m[35mUser Load (7.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."email" = 'jotape@f451.com.br' LIMIT 1
+Redirected to http://localhost:3000/me
+Completed 302 Found in 106ms (ActiveRecord: 7.0ms)
+
+
+Started GET "/me" for 127.0.0.1 at 2014-04-23 14:46:12 -0300
+Processing by UsersController#me as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 11]]
+  [1m[35mProfile Load (0.0ms)[0m  SELECT  "profiles".* FROM "profiles"  WHERE "profiles"."user_id" = $1  ORDER BY "profiles"."id" ASC LIMIT 1  [["user_id", 11]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 11]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 11]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 11]]
+  [1m[35mResume Load (45.0ms)[0m  SELECT  "resumes".* FROM "resumes"  WHERE "resumes"."user_id" = $1  ORDER BY "resumes"."id" ASC LIMIT 1  [["user_id", 11]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 11]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "resumes".* FROM "resumes"  WHERE "resumes"."user_id" = $1  ORDER BY "resumes"."id" ASC LIMIT 1  [["user_id", 11]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 11]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "resumes".* FROM "resumes"  WHERE "resumes"."user_id" = $1  ORDER BY "resumes"."id" ASC LIMIT 1  [["user_id", 11]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 11]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "resumes".* FROM "resumes"  WHERE "resumes"."user_id" = $1  ORDER BY "resumes"."id" ASC LIMIT 1  [["user_id", 11]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 11]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "resumes".* FROM "resumes"  WHERE "resumes"."user_id" = $1  ORDER BY "resumes"."id" ASC LIMIT 1  [["user_id", 11]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 11]]
+  Rendered shared/_sidebar.html.erb (195.0ms)
+  Rendered users/me.html.erb within layouts/temp (211.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 11]]
+Completed 200 OK in 242ms (Views: 194.0ms | ActiveRecord: 47.0ms)
+
+
+Started GET "/assets/semantic.css?body=1" for 127.0.0.1 at 2014-04-23 14:46:12 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-23 14:46:12 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-23 14:46:12 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-23 14:46:12 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-23 14:46:12 -0300
+
+
+Started GET "/assets/semantic.js?body=1" for 127.0.0.1 at 2014-04-23 14:46:12 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-23 14:46:13 -0300
+
+
+Started GET "/assets/icons.svg" for 127.0.0.1 at 2014-04-23 14:46:13 -0300
+
+
+Started GET "/assets/icons.woff" for 127.0.0.1 at 2014-04-23 14:46:13 -0300
+
+
+Started GET "/resumes/new" for 127.0.0.1 at 2014-04-23 14:46:15 -0300
+Processing by ResumesController#new as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 11]]
+  [1m[35mProfile Load (1.0ms)[0m  SELECT  "profiles".* FROM "profiles"  WHERE "profiles"."user_id" = $1  ORDER BY "profiles"."id" ASC LIMIT 1  [["user_id", 11]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 11]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 11]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 11]]
+  [1m[35mResume Load (0.0ms)[0m  SELECT  "resumes".* FROM "resumes"  WHERE "resumes"."user_id" = $1  ORDER BY "resumes"."id" ASC LIMIT 1  [["user_id", 11]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 11]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "resumes".* FROM "resumes"  WHERE "resumes"."user_id" = $1  ORDER BY "resumes"."id" ASC LIMIT 1  [["user_id", 11]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 11]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "resumes".* FROM "resumes"  WHERE "resumes"."user_id" = $1  ORDER BY "resumes"."id" ASC LIMIT 1  [["user_id", 11]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 11]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "resumes".* FROM "resumes"  WHERE "resumes"."user_id" = $1  ORDER BY "resumes"."id" ASC LIMIT 1  [["user_id", 11]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 11]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "resumes".* FROM "resumes"  WHERE "resumes"."user_id" = $1  ORDER BY "resumes"."id" ASC LIMIT 1  [["user_id", 11]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 11]]
+  Rendered shared/_sidebar.html.erb (131.0ms)
+  Rendered resumes/_form.html.erb (1.0ms)
+  Rendered resumes/new.html.erb within layouts/temp (156.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 11]]
+Completed 200 OK in 172ms (Views: 169.0ms | ActiveRecord: 2.0ms)
+
+
+Started POST "/resumes" for 127.0.0.1 at 2014-04-23 14:46:29 -0300
+Processing by ResumesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"U6QlC/E8b9XzUIOJQTSgFr68VQIa9K6ZNHnYMZVyH4Y=", "resume"=>{"title"=>"Analista de Sistemas", "section_work"=>"Internet", "description"=>"Eu sou foda para caralho", "show_in_search"=>"1", "is_public_link"=>"1"}}
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (16.0ms)[0m  INSERT INTO "resumes" ("created_at", "description", "is_public_link", "section_work", "show_in_search", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["created_at", "2014-04-23 17:46:30.028941"], ["description", "Eu sou foda para caralho"], ["is_public_link", "t"], ["section_work", "Internet"], ["show_in_search", "t"], ["title", "Analista de Sistemas"], ["updated_at", "2014-04-23 17:46:30.028941"]]
+  [1m[36m (1.0ms)[0m  [1mCOMMIT[0m
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 11]]
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  UPDATE "resumes" SET "updated_at" = $1, "user_id" = $2 WHERE "resumes"."id" = 3  [["updated_at", "2014-04-23 17:46:30.076943"], ["user_id", 11]]
+  [1m[36m (0.0ms)[0m  [1mCOMMIT[0m
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 11]]
+  [1m[36mResume Load (0.0ms)[0m  [1mSELECT  "resumes".* FROM "resumes"  WHERE "resumes"."user_id" = $1  ORDER BY "resumes"."id" ASC LIMIT 1[0m  [["user_id", 11]]
+Redirected to http://localhost:3000/resumes/3/edit
+Completed 302 Found in 114ms (ActiveRecord: 18.0ms)
+
+
+Started GET "/resumes/3/edit" for 127.0.0.1 at 2014-04-23 14:46:30 -0300
+Processing by ResumesController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 11]]
+  [1m[36mResume Load (0.0ms)[0m  [1mSELECT  "resumes".* FROM "resumes"  WHERE "resumes"."user_id" = $1  ORDER BY "resumes"."id" ASC LIMIT 1[0m  [["user_id", 11]]
+  [1m[35mResume Load (0.0ms)[0m  SELECT  "resumes".* FROM "resumes"  WHERE "resumes"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 11]]
+  [1m[35mProfile Load (0.0ms)[0m  SELECT  "profiles".* FROM "profiles"  WHERE "profiles"."user_id" = $1  ORDER BY "profiles"."id" ASC LIMIT 1  [["user_id", 11]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 11]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 11]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 11]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "resumes".* FROM "resumes"  WHERE "resumes"."user_id" = $1  ORDER BY "resumes"."id" ASC LIMIT 1  [["user_id", 11]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 11]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "resumes".* FROM "resumes"  WHERE "resumes"."user_id" = $1  ORDER BY "resumes"."id" ASC LIMIT 1  [["user_id", 11]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 11]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "resumes".* FROM "resumes"  WHERE "resumes"."user_id" = $1  ORDER BY "resumes"."id" ASC LIMIT 1  [["user_id", 11]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 11]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "resumes".* FROM "resumes"  WHERE "resumes"."user_id" = $1  ORDER BY "resumes"."id" ASC LIMIT 1  [["user_id", 11]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 11]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "resumes".* FROM "resumes"  WHERE "resumes"."user_id" = $1  ORDER BY "resumes"."id" ASC LIMIT 1  [["user_id", 11]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 11]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "resumes".* FROM "resumes"  WHERE "resumes"."user_id" = $1  ORDER BY "resumes"."id" ASC LIMIT 1  [["user_id", 11]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 11]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "resumes".* FROM "resumes"  WHERE "resumes"."user_id" = $1  ORDER BY "resumes"."id" ASC LIMIT 1  [["user_id", 11]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 11]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "resumes".* FROM "resumes"  WHERE "resumes"."user_id" = $1  ORDER BY "resumes"."id" ASC LIMIT 1  [["user_id", 11]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 11]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "resumes".* FROM "resumes"  WHERE "resumes"."user_id" = $1  ORDER BY "resumes"."id" ASC LIMIT 1  [["user_id", 11]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 11]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "resumes".* FROM "resumes"  WHERE "resumes"."user_id" = $1  ORDER BY "resumes"."id" ASC LIMIT 1  [["user_id", 11]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 11]]
+  Rendered shared/_sidebar.html.erb (264.0ms)
+  Rendered resumes/_form.html.erb (1.0ms)
+  Rendered resumes/edit.html.erb within layouts/temp (289.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 11]]
+Completed 200 OK in 354ms (Views: 324.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/semantic.css?body=1" for 127.0.0.1 at 2014-04-23 14:46:30 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-23 14:46:30 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-23 14:46:30 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-23 14:46:30 -0300
+
+
+Started GET "/assets/semantic.js?body=1" for 127.0.0.1 at 2014-04-23 14:46:30 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-23 14:46:30 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-23 14:46:30 -0300
+
+
+Started GET "/assets/icons.svg" for 127.0.0.1 at 2014-04-23 14:46:30 -0300
+
+
+Started GET "/assets/icons.woff" for 127.0.0.1 at 2014-04-23 14:46:30 -0300
+
+
+Started GET "/resumes/3/experiences" for 127.0.0.1 at 2014-04-23 14:46:32 -0300
+Processing by ExperiencesController#index as HTML
+  Parameters: {"resume_id"=>"3"}
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 11]]
+  [1m[35mResume Load (0.0ms)[0m  SELECT  "resumes".* FROM "resumes"  WHERE "resumes"."user_id" = $1  ORDER BY "resumes"."id" ASC LIMIT 1  [["user_id", 11]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 11]]
+  [1m[35mProfile Load (1.0ms)[0m  SELECT  "profiles".* FROM "profiles"  WHERE "profiles"."user_id" = $1  ORDER BY "profiles"."id" ASC LIMIT 1  [["user_id", 11]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 11]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 11]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 11]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "resumes".* FROM "resumes"  WHERE "resumes"."user_id" = $1  ORDER BY "resumes"."id" ASC LIMIT 1  [["user_id", 11]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 11]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "resumes".* FROM "resumes"  WHERE "resumes"."user_id" = $1  ORDER BY "resumes"."id" ASC LIMIT 1  [["user_id", 11]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 11]]
+  [1m[35mCACHE (1.0ms)[0m  SELECT  "resumes".* FROM "resumes"  WHERE "resumes"."user_id" = $1  ORDER BY "resumes"."id" ASC LIMIT 1  [["user_id", 11]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 11]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "resumes".* FROM "resumes"  WHERE "resumes"."user_id" = $1  ORDER BY "resumes"."id" ASC LIMIT 1  [["user_id", 11]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 11]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "resumes".* FROM "resumes"  WHERE "resumes"."user_id" = $1  ORDER BY "resumes"."id" ASC LIMIT 1  [["user_id", 11]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 11]]
+  [1m[35mCACHE (1.0ms)[0m  SELECT  "resumes".* FROM "resumes"  WHERE "resumes"."user_id" = $1  ORDER BY "resumes"."id" ASC LIMIT 1  [["user_id", 11]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 11]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "resumes".* FROM "resumes"  WHERE "resumes"."user_id" = $1  ORDER BY "resumes"."id" ASC LIMIT 1  [["user_id", 11]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 11]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "resumes".* FROM "resumes"  WHERE "resumes"."user_id" = $1  ORDER BY "resumes"."id" ASC LIMIT 1  [["user_id", 11]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 11]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "resumes".* FROM "resumes"  WHERE "resumes"."user_id" = $1  ORDER BY "resumes"."id" ASC LIMIT 1  [["user_id", 11]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 11]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "resumes".* FROM "resumes"  WHERE "resumes"."user_id" = $1  ORDER BY "resumes"."id" ASC LIMIT 1  [["user_id", 11]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 11]]
+  Rendered shared/_sidebar.html.erb (188.0ms)
+  [1m[35m (62.0ms)[0m  SELECT COUNT(*) FROM "experiences"  WHERE "experiences"."resume_id" = $1  [["resume_id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 11]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "resumes".* FROM "resumes"  WHERE "resumes"."user_id" = $1  ORDER BY "resumes"."id" ASC LIMIT 1  [["user_id", 11]]
+  Rendered experiences/index.html.erb within layouts/temp (276.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 11]]
+Completed 200 OK in 350ms (Views: 245.0ms | ActiveRecord: 67.0ms)
+
+
+Started GET "/resumes/3/experiences/new" for 127.0.0.1 at 2014-04-23 14:46:33 -0300
+Processing by ExperiencesController#new as HTML
+  Parameters: {"resume_id"=>"3"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 11]]
+  [1m[36mProfile Load (0.0ms)[0m  [1mSELECT  "profiles".* FROM "profiles"  WHERE "profiles"."user_id" = $1  ORDER BY "profiles"."id" ASC LIMIT 1[0m  [["user_id", 11]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 11]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 11]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 11]]
+  [1m[36mResume Load (1.0ms)[0m  [1mSELECT  "resumes".* FROM "resumes"  WHERE "resumes"."user_id" = $1  ORDER BY "resumes"."id" ASC LIMIT 1[0m  [["user_id", 11]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 11]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "resumes".* FROM "resumes"  WHERE "resumes"."user_id" = $1  ORDER BY "resumes"."id" ASC LIMIT 1[0m  [["user_id", 11]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 11]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "resumes".* FROM "resumes"  WHERE "resumes"."user_id" = $1  ORDER BY "resumes"."id" ASC LIMIT 1[0m  [["user_id", 11]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 11]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "resumes".* FROM "resumes"  WHERE "resumes"."user_id" = $1  ORDER BY "resumes"."id" ASC LIMIT 1[0m  [["user_id", 11]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 11]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "resumes".* FROM "resumes"  WHERE "resumes"."user_id" = $1  ORDER BY "resumes"."id" ASC LIMIT 1[0m  [["user_id", 11]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 11]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "resumes".* FROM "resumes"  WHERE "resumes"."user_id" = $1  ORDER BY "resumes"."id" ASC LIMIT 1[0m  [["user_id", 11]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 11]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "resumes".* FROM "resumes"  WHERE "resumes"."user_id" = $1  ORDER BY "resumes"."id" ASC LIMIT 1[0m  [["user_id", 11]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 11]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "resumes".* FROM "resumes"  WHERE "resumes"."user_id" = $1  ORDER BY "resumes"."id" ASC LIMIT 1[0m  [["user_id", 11]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 11]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "resumes".* FROM "resumes"  WHERE "resumes"."user_id" = $1  ORDER BY "resumes"."id" ASC LIMIT 1[0m  [["user_id", 11]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 11]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "resumes".* FROM "resumes"  WHERE "resumes"."user_id" = $1  ORDER BY "resumes"."id" ASC LIMIT 1[0m  [["user_id", 11]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 11]]
+  Rendered shared/_sidebar.html.erb (185.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 11]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "resumes".* FROM "resumes"  WHERE "resumes"."user_id" = $1  ORDER BY "resumes"."id" ASC LIMIT 1  [["user_id", 11]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 11]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "resumes".* FROM "resumes"  WHERE "resumes"."user_id" = $1  ORDER BY "resumes"."id" ASC LIMIT 1  [["user_id", 11]]
+  Rendered experiences/_form.html.erb (5.0ms)
+  Rendered experiences/new.html.erb within layouts/temp (274.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 11]]
+Completed 200 OK in 302ms (Views: 300.0ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/resumes/3/experiences" for 127.0.0.1 at 2014-04-23 14:46:51 -0300
+Processing by ExperiencesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"U6QlC/E8b9XzUIOJQTSgFr68VQIa9K6ZNHnYMZVyH4Y=", "experience"=>{"company_name"=>"Giga Byte", "title"=>"Instrutor de Informática", "location"=>"São Paulo - SP", "start_date"=>"01/01/2006", "end_date"=>"01/01/2008", "is_current_job"=>"1", "description"=>"Tem algo a dizer sobre o seu trabalho nesta empresa?"}, "resume_id"=>"3"}
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36mSQL (17.0ms)[0m  [1mINSERT INTO "experiences" ("company_name", "created_at", "description", "end_date", "is_current_job", "location", "start_date", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["company_name", "Giga Byte"], ["created_at", "2014-04-23 17:46:51.048143"], ["description", "Tem algo a dizer sobre o seu trabalho nesta empresa?"], ["end_date", "2008-01-01"], ["is_current_job", "t"], ["location", "São Paulo - SP"], ["start_date", "2006-01-01"], ["title", "Instrutor de Informática"], ["updated_at", "2014-04-23 17:46:51.048143"]]
+  [1m[35m (1.0ms)[0m  COMMIT
+Completed 500 Internal Server Error in 45ms
+
+NameError (undefined local variable or method `rview_context' for #<#<Class:0x3598860>:0x37a3da8>):
+  app/helpers/resumes_helper.rb:3:in `add_and_save_resume'
+  app/controllers/experiences_controller.rb:19:in `create'
+
+
+  Rendered c:/Ruby200/lib/ruby/gems/2.0.0/gems/actionpack-4.1.0.beta1/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered c:/Ruby200/lib/ruby/gems/2.0.0/gems/actionpack-4.1.0.beta1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered c:/Ruby200/lib/ruby/gems/2.0.0/gems/actionpack-4.1.0.beta1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered c:/Ruby200/lib/ruby/gems/2.0.0/gems/actionpack-4.1.0.beta1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (80.0ms)
+
+
+Started POST "/resumes/3/experiences" for 127.0.0.1 at 2014-04-23 14:47:10 -0300
+Processing by ExperiencesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"U6QlC/E8b9XzUIOJQTSgFr68VQIa9K6ZNHnYMZVyH4Y=", "experience"=>{"company_name"=>"Giga Byte", "title"=>"Instrutor de Informática", "location"=>"São Paulo - SP", "start_date"=>"01/01/2006", "end_date"=>"01/01/2008", "is_current_job"=>"1", "description"=>"Tem algo a dizer sobre o seu trabalho nesta empresa?"}, "resume_id"=>"3"}
+  [1m[36m (1.0ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "experiences" ("company_name", "created_at", "description", "end_date", "is_current_job", "location", "start_date", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"  [["company_name", "Giga Byte"], ["created_at", "2014-04-23 17:47:10.273242"], ["description", "Tem algo a dizer sobre o seu trabalho nesta empresa?"], ["end_date", "2008-01-01"], ["is_current_job", "t"], ["location", "São Paulo - SP"], ["start_date", "2006-01-01"], ["title", "Instrutor de Informática"], ["updated_at", "2014-04-23 17:47:10.273242"]]
+  [1m[36m (1.0ms)[0m  [1mCOMMIT[0m
+Completed 500 Internal Server Error in 41ms
+
+NameError (undefined local variable or method `view_context' for #<#<Class:0x5a6c4c8>:0x5dbc2b0>):
+  app/helpers/resumes_helper.rb:3:in `add_and_save_resume'
+  app/controllers/experiences_controller.rb:19:in `create'
+
+
+  Rendered c:/Ruby200/lib/ruby/gems/2.0.0/gems/actionpack-4.1.0.beta1/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered c:/Ruby200/lib/ruby/gems/2.0.0/gems/actionpack-4.1.0.beta1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered c:/Ruby200/lib/ruby/gems/2.0.0/gems/actionpack-4.1.0.beta1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered c:/Ruby200/lib/ruby/gems/2.0.0/gems/actionpack-4.1.0.beta1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (56.0ms)
+
+
+Started POST "/resumes/3/experiences" for 127.0.0.1 at 2014-04-23 14:47:16 -0300
+Processing by ExperiencesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"U6QlC/E8b9XzUIOJQTSgFr68VQIa9K6ZNHnYMZVyH4Y=", "experience"=>{"company_name"=>"Giga Byte", "title"=>"Instrutor de Informática", "location"=>"São Paulo - SP", "start_date"=>"01/01/2006", "end_date"=>"01/01/2008", "is_current_job"=>"1", "description"=>"Tem algo a dizer sobre o seu trabalho nesta empresa?"}, "resume_id"=>"3"}
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "experiences" ("company_name", "created_at", "description", "end_date", "is_current_job", "location", "start_date", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["company_name", "Giga Byte"], ["created_at", "2014-04-23 17:47:16.630606"], ["description", "Tem algo a dizer sobre o seu trabalho nesta empresa?"], ["end_date", "2008-01-01"], ["is_current_job", "t"], ["location", "São Paulo - SP"], ["start_date", "2006-01-01"], ["title", "Instrutor de Informática"], ["updated_at", "2014-04-23 17:47:16.630606"]]
+  [1m[35m (1.0ms)[0m  COMMIT
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 11]]
+Completed 500 Internal Server Error in 58ms
+
+NoMethodError (undefined method `resumeesume' for #<User:0x79aa060>):
+  app/helpers/resumes_helper.rb:3:in `add_and_save_resume'
+  app/controllers/experiences_controller.rb:19:in `create'
+
+
+  Rendered c:/Ruby200/lib/ruby/gems/2.0.0/gems/actionpack-4.1.0.beta1/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered c:/Ruby200/lib/ruby/gems/2.0.0/gems/actionpack-4.1.0.beta1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered c:/Ruby200/lib/ruby/gems/2.0.0/gems/actionpack-4.1.0.beta1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered c:/Ruby200/lib/ruby/gems/2.0.0/gems/actionpack-4.1.0.beta1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (29.0ms)
+
+
+Started POST "/resumes/3/experiences" for 127.0.0.1 at 2014-04-23 14:47:24 -0300
+Processing by ExperiencesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"U6QlC/E8b9XzUIOJQTSgFr68VQIa9K6ZNHnYMZVyH4Y=", "experience"=>{"company_name"=>"Giga Byte", "title"=>"Instrutor de Informática", "location"=>"São Paulo - SP", "start_date"=>"01/01/2006", "end_date"=>"01/01/2008", "is_current_job"=>"1", "description"=>"Tem algo a dizer sobre o seu trabalho nesta empresa?"}, "resume_id"=>"3"}
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "experiences" ("company_name", "created_at", "description", "end_date", "is_current_job", "location", "start_date", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["company_name", "Giga Byte"], ["created_at", "2014-04-23 17:47:24.769072"], ["description", "Tem algo a dizer sobre o seu trabalho nesta empresa?"], ["end_date", "2008-01-01"], ["is_current_job", "t"], ["location", "São Paulo - SP"], ["start_date", "2006-01-01"], ["title", "Instrutor de Informática"], ["updated_at", "2014-04-23 17:47:24.769072"]]
+  [1m[35m (20.0ms)[0m  COMMIT
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 11]]
+  [1m[35mResume Load (0.0ms)[0m  SELECT  "resumes".* FROM "resumes"  WHERE "resumes"."user_id" = $1  ORDER BY "resumes"."id" ASC LIMIT 1  [["user_id", 11]]
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.0ms)[0m  UPDATE "experiences" SET "resume_id" = $1, "updated_at" = $2 WHERE "experiences"."id" = 10  [["resume_id", 3], ["updated_at", "2014-04-23 17:47:24.823075"]]
+  [1m[36m (1.0ms)[0m  [1mCOMMIT[0m
+Completed 500 Internal Server Error in 97ms
+
+NameError (undefined local variable or method `view_context' for #<#<Class:0x34541d0>:0x3d5e7f0>):
+  app/helpers/resumes_helper.rb:5:in `add_and_save_resume'
+  app/controllers/experiences_controller.rb:19:in `create'
+
+
+  Rendered c:/Ruby200/lib/ruby/gems/2.0.0/gems/actionpack-4.1.0.beta1/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered c:/Ruby200/lib/ruby/gems/2.0.0/gems/actionpack-4.1.0.beta1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered c:/Ruby200/lib/ruby/gems/2.0.0/gems/actionpack-4.1.0.beta1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered c:/Ruby200/lib/ruby/gems/2.0.0/gems/actionpack-4.1.0.beta1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (55.0ms)
+
+
+Started POST "/resumes/3/experiences" for 127.0.0.1 at 2014-04-23 14:47:30 -0300
+Processing by ExperiencesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"U6QlC/E8b9XzUIOJQTSgFr68VQIa9K6ZNHnYMZVyH4Y=", "experience"=>{"company_name"=>"Giga Byte", "title"=>"Instrutor de Informática", "location"=>"São Paulo - SP", "start_date"=>"01/01/2006", "end_date"=>"01/01/2008", "is_current_job"=>"1", "description"=>"Tem algo a dizer sobre o seu trabalho nesta empresa?"}, "resume_id"=>"3"}
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "experiences" ("company_name", "created_at", "description", "end_date", "is_current_job", "location", "start_date", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["company_name", "Giga Byte"], ["created_at", "2014-04-23 17:47:30.966426"], ["description", "Tem algo a dizer sobre o seu trabalho nesta empresa?"], ["end_date", "2008-01-01"], ["is_current_job", "t"], ["location", "São Paulo - SP"], ["start_date", "2006-01-01"], ["title", "Instrutor de Informática"], ["updated_at", "2014-04-23 17:47:30.966426"]]
+  [1m[35m (1.0ms)[0m  COMMIT
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 11]]
+  [1m[35mResume Load (0.0ms)[0m  SELECT  "resumes".* FROM "resumes"  WHERE "resumes"."user_id" = $1  ORDER BY "resumes"."id" ASC LIMIT 1  [["user_id", 11]]
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  UPDATE "experiences" SET "resume_id" = $1, "updated_at" = $2 WHERE "experiences"."id" = 11  [["resume_id", 3], ["updated_at", "2014-04-23 17:47:31.026429"]]
+  [1m[36m (0.0ms)[0m  [1mCOMMIT[0m
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 11]]
+  [1m[36mResume Load (0.0ms)[0m  [1mSELECT  "resumes".* FROM "resumes"  WHERE "resumes"."user_id" = $1  ORDER BY "resumes"."id" ASC LIMIT 1[0m  [["user_id", 11]]
+Completed 500 Internal Server Error in 135ms
+
+NoMethodError (undefined method `redirect_to' for #<#<Class:0x7b50040>:0x7998c90>):
+  app/helpers/resumes_helper.rb:5:in `add_and_save_resume'
+  app/controllers/experiences_controller.rb:19:in `create'
+
+
+  Rendered c:/Ruby200/lib/ruby/gems/2.0.0/gems/actionpack-4.1.0.beta1/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.0ms)
+  Rendered c:/Ruby200/lib/ruby/gems/2.0.0/gems/actionpack-4.1.0.beta1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered c:/Ruby200/lib/ruby/gems/2.0.0/gems/actionpack-4.1.0.beta1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered c:/Ruby200/lib/ruby/gems/2.0.0/gems/actionpack-4.1.0.beta1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (35.0ms)
+
+
+Started POST "/resumes/3/experiences" for 127.0.0.1 at 2014-04-23 14:54:17 -0300
+Processing by ExperiencesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"U6QlC/E8b9XzUIOJQTSgFr68VQIa9K6ZNHnYMZVyH4Y=", "experience"=>{"company_name"=>"Giga Byte", "title"=>"Instrutor de Informática", "location"=>"São Paulo - SP", "start_date"=>"01/01/2006", "end_date"=>"01/01/2008", "is_current_job"=>"1", "description"=>"Tem algo a dizer sobre o seu trabalho nesta empresa?"}, "resume_id"=>"3"}
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36mSQL (14.0ms)[0m  [1mINSERT INTO "experiences" ("company_name", "created_at", "description", "end_date", "is_current_job", "location", "start_date", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["company_name", "Giga Byte"], ["created_at", "2014-04-23 17:54:18.050710"], ["description", "Tem algo a dizer sobre o seu trabalho nesta empresa?"], ["end_date", "2008-01-01"], ["is_current_job", "t"], ["location", "São Paulo - SP"], ["start_date", "2006-01-01"], ["title", "Instrutor de Informática"], ["updated_at", "2014-04-23 17:54:18.050710"]]
+  [1m[35m (1.0ms)[0m  COMMIT
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 11]]
+  [1m[35mResume Load (0.0ms)[0m  SELECT  "resumes".* FROM "resumes"  WHERE "resumes"."user_id" = $1  ORDER BY "resumes"."id" ASC LIMIT 1  [["user_id", 11]]
+  [1m[36m (1.0ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.0ms)[0m  UPDATE "experiences" SET "resume_id" = $1, "updated_at" = $2 WHERE "experiences"."id" = 12  [["resume_id", 3], ["updated_at", "2014-04-23 17:54:18.120714"]]
+  [1m[36m (0.0ms)[0m  [1mCOMMIT[0m
+Completed 500 Internal Server Error in 105ms
+
+NameError (undefined local variable or method `current_user' for #<ExperiencesController:0x7848510>):
+  app/controllers/experiences_controller.rb:20:in `create'
+
+
+  Rendered c:/Ruby200/lib/ruby/gems/2.0.0/gems/actionpack-4.1.0.beta1/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.0ms)
+  Rendered c:/Ruby200/lib/ruby/gems/2.0.0/gems/actionpack-4.1.0.beta1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered c:/Ruby200/lib/ruby/gems/2.0.0/gems/actionpack-4.1.0.beta1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered c:/Ruby200/lib/ruby/gems/2.0.0/gems/actionpack-4.1.0.beta1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (33.0ms)
+
+
+Started POST "/resumes/3/experiences" for 127.0.0.1 at 2014-04-23 14:54:44 -0300
+Processing by ExperiencesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"U6QlC/E8b9XzUIOJQTSgFr68VQIa9K6ZNHnYMZVyH4Y=", "experience"=>{"company_name"=>"Giga Byte", "title"=>"Instrutor de Informática", "location"=>"São Paulo - SP", "start_date"=>"01/01/2006", "end_date"=>"01/01/2008", "is_current_job"=>"1", "description"=>"Tem algo a dizer sobre o seu trabalho nesta empresa?"}, "resume_id"=>"3"}
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "experiences" ("company_name", "created_at", "description", "end_date", "is_current_job", "location", "start_date", "title", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["company_name", "Giga Byte"], ["created_at", "2014-04-23 17:54:44.861243"], ["description", "Tem algo a dizer sobre o seu trabalho nesta empresa?"], ["end_date", "2008-01-01"], ["is_current_job", "t"], ["location", "São Paulo - SP"], ["start_date", "2006-01-01"], ["title", "Instrutor de Informática"], ["updated_at", "2014-04-23 17:54:44.861243"]]
+  [1m[35m (0.0ms)[0m  COMMIT
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 11]]
+  [1m[35mResume Load (0.0ms)[0m  SELECT  "resumes".* FROM "resumes"  WHERE "resumes"."user_id" = $1  ORDER BY "resumes"."id" ASC LIMIT 1  [["user_id", 11]]
+  [1m[36m (1.0ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  UPDATE "experiences" SET "resume_id" = $1, "updated_at" = $2 WHERE "experiences"."id" = 13  [["resume_id", 3], ["updated_at", "2014-04-23 17:54:44.926247"]]
+  [1m[36m (0.0ms)[0m  [1mCOMMIT[0m
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 11]]
+  [1m[36mResume Load (1.0ms)[0m  [1mSELECT  "resumes".* FROM "resumes"  WHERE "resumes"."user_id" = $1  ORDER BY "resumes"."id" ASC LIMIT 1[0m  [["user_id", 11]]
+Redirected to http://localhost:3000/resumes/3/educations
+Completed 302 Found in 141ms (ActiveRecord: 9.0ms)
+
+
+Started GET "/resumes/3/educations" for 127.0.0.1 at 2014-04-23 14:54:45 -0300
+Processing by EducationsController#index as HTML
+  Parameters: {"resume_id"=>"3"}
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 11]]
+  [1m[36mResume Load (0.0ms)[0m  [1mSELECT  "resumes".* FROM "resumes"  WHERE "resumes"."user_id" = $1  ORDER BY "resumes"."id" ASC LIMIT 1[0m  [["user_id", 11]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 11]]
+  [1m[36mProfile Load (0.0ms)[0m  [1mSELECT  "profiles".* FROM "profiles"  WHERE "profiles"."user_id" = $1  ORDER BY "profiles"."id" ASC LIMIT 1[0m  [["user_id", 11]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 11]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 11]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 11]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "resumes".* FROM "resumes"  WHERE "resumes"."user_id" = $1  ORDER BY "resumes"."id" ASC LIMIT 1[0m  [["user_id", 11]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 11]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "resumes".* FROM "resumes"  WHERE "resumes"."user_id" = $1  ORDER BY "resumes"."id" ASC LIMIT 1[0m  [["user_id", 11]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 11]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "resumes".* FROM "resumes"  WHERE "resumes"."user_id" = $1  ORDER BY "resumes"."id" ASC LIMIT 1[0m  [["user_id", 11]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 11]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "resumes".* FROM "resumes"  WHERE "resumes"."user_id" = $1  ORDER BY "resumes"."id" ASC LIMIT 1[0m  [["user_id", 11]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 11]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "resumes".* FROM "resumes"  WHERE "resumes"."user_id" = $1  ORDER BY "resumes"."id" ASC LIMIT 1[0m  [["user_id", 11]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 11]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "resumes".* FROM "resumes"  WHERE "resumes"."user_id" = $1  ORDER BY "resumes"."id" ASC LIMIT 1[0m  [["user_id", 11]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 11]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "resumes".* FROM "resumes"  WHERE "resumes"."user_id" = $1  ORDER BY "resumes"."id" ASC LIMIT 1[0m  [["user_id", 11]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 11]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "resumes".* FROM "resumes"  WHERE "resumes"."user_id" = $1  ORDER BY "resumes"."id" ASC LIMIT 1[0m  [["user_id", 11]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 11]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "resumes".* FROM "resumes"  WHERE "resumes"."user_id" = $1  ORDER BY "resumes"."id" ASC LIMIT 1[0m  [["user_id", 11]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 11]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "resumes".* FROM "resumes"  WHERE "resumes"."user_id" = $1  ORDER BY "resumes"."id" ASC LIMIT 1[0m  [["user_id", 11]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 11]]
+  Rendered shared/_sidebar.html.erb (231.0ms)
+  [1m[36m (14.0ms)[0m  [1mSELECT COUNT(*) FROM "educations"  WHERE "educations"."resume_id" = $1[0m  [["resume_id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 11]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "resumes".* FROM "resumes"  WHERE "resumes"."user_id" = $1  ORDER BY "resumes"."id" ASC LIMIT 1[0m  [["user_id", 11]]
+  Rendered educations/index.html.erb within layouts/temp (276.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 11]]
+Completed 200 OK in 330ms (Views: 293.0ms | ActiveRecord: 18.0ms)
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2014-04-23 14:54:45 -0300
+
+
+Started GET "/assets/semantic.css?body=1" for 127.0.0.1 at 2014-04-23 14:54:45 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-23 14:54:45 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-23 14:54:45 -0300
+
+
+Started GET "/assets/script.js?body=1" for 127.0.0.1 at 2014-04-23 14:54:45 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-23 14:54:45 -0300
+
+
+Started GET "/assets/semantic.js?body=1" for 127.0.0.1 at 2014-04-23 14:54:45 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-23 14:54:45 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-23 14:54:45 -0300
+
+
+Started GET "/assets/icons.svg" for 127.0.0.1 at 2014-04-23 14:54:45 -0300
+
+
+Started GET "/assets/icons.woff" for 127.0.0.1 at 2014-04-23 14:54:46 -0300
+
+
+Started GET "/resumes/3/educations" for 127.0.0.1 at 2014-04-23 14:54:47 -0300
+Processing by EducationsController#index as HTML
+  Parameters: {"resume_id"=>"3"}
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 11]]
+  [1m[35mResume Load (0.0ms)[0m  SELECT  "resumes".* FROM "resumes"  WHERE "resumes"."user_id" = $1  ORDER BY "resumes"."id" ASC LIMIT 1  [["user_id", 11]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 11]]
+  [1m[35mProfile Load (1.0ms)[0m  SELECT  "profiles".* FROM "profiles"  WHERE "profiles"."user_id" = $1  ORDER BY "profiles"."id" ASC LIMIT 1  [["user_id", 11]]
+  [1m[36mCACHE (1.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 11]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 11]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 11]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "resumes".* FROM "resumes"  WHERE "resumes"."user_id" = $1  ORDER BY "resumes"."id" ASC LIMIT 1  [["user_id", 11]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 11]]
+  [1m[35mCACHE (1.0ms)[0m  SELECT  "resumes".* FROM "resumes"  WHERE "resumes"."user_id" = $1  ORDER BY "resumes"."id" ASC LIMIT 1  [["user_id", 11]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 11]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "resumes".* FROM "resumes"  WHERE "resumes"."user_id" = $1  ORDER BY "resumes"."id" ASC LIMIT 1  [["user_id", 11]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 11]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "resumes".* FROM "resumes"  WHERE "resumes"."user_id" = $1  ORDER BY "resumes"."id" ASC LIMIT 1  [["user_id", 11]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 11]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "resumes".* FROM "resumes"  WHERE "resumes"."user_id" = $1  ORDER BY "resumes"."id" ASC LIMIT 1  [["user_id", 11]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 11]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "resumes".* FROM "resumes"  WHERE "resumes"."user_id" = $1  ORDER BY "resumes"."id" ASC LIMIT 1  [["user_id", 11]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 11]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "resumes".* FROM "resumes"  WHERE "resumes"."user_id" = $1  ORDER BY "resumes"."id" ASC LIMIT 1  [["user_id", 11]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 11]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "resumes".* FROM "resumes"  WHERE "resumes"."user_id" = $1  ORDER BY "resumes"."id" ASC LIMIT 1  [["user_id", 11]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 11]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "resumes".* FROM "resumes"  WHERE "resumes"."user_id" = $1  ORDER BY "resumes"."id" ASC LIMIT 1  [["user_id", 11]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 11]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "resumes".* FROM "resumes"  WHERE "resumes"."user_id" = $1  ORDER BY "resumes"."id" ASC LIMIT 1  [["user_id", 11]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 11]]
+  Rendered shared/_sidebar.html.erb (181.0ms)
+  [1m[35m (1.0ms)[0m  SELECT COUNT(*) FROM "educations"  WHERE "educations"."resume_id" = $1  [["resume_id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 11]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "resumes".* FROM "resumes"  WHERE "resumes"."user_id" = $1  ORDER BY "resumes"."id" ASC LIMIT 1  [["user_id", 11]]
+  Rendered educations/index.html.erb within layouts/temp (215.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 11]]
+Completed 200 OK in 264ms (Views: 247.0ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-23 14:54:47 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-23 14:54:47 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-23 14:54:47 -0300
+
+
+Started GET "/assets/semantic.css?body=1" for 127.0.0.1 at 2014-04-23 14:54:47 -0300
+
+
+Started GET "/assets/style.css?body=1" for 127.0.0.1 at 2014-04-23 14:54:48 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-23 14:54:48 -0300
+
+
+Started GET "/assets/script.js?body=1" for 127.0.0.1 at 2014-04-23 14:54:48 -0300
+
+
+Started GET "/assets/semantic.js?body=1" for 127.0.0.1 at 2014-04-23 14:54:48 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-23 14:54:48 -0300
+
+
+Started GET "/assets/icons.svg" for 127.0.0.1 at 2014-04-23 14:54:48 -0300
+
+
+Started GET "/assets/icons.woff" for 127.0.0.1 at 2014-04-23 14:54:48 -0300
+
+
+Started GET "/resumes/3/educations/new" for 127.0.0.1 at 2014-04-23 14:54:49 -0300
+Processing by EducationsController#new as HTML
+  Parameters: {"resume_id"=>"3"}
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 11]]
+  [1m[36mProfile Load (0.0ms)[0m  [1mSELECT  "profiles".* FROM "profiles"  WHERE "profiles"."user_id" = $1  ORDER BY "profiles"."id" ASC LIMIT 1[0m  [["user_id", 11]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 11]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 11]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 11]]
+  [1m[36mResume Load (1.0ms)[0m  [1mSELECT  "resumes".* FROM "resumes"  WHERE "resumes"."user_id" = $1  ORDER BY "resumes"."id" ASC LIMIT 1[0m  [["user_id", 11]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 11]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "resumes".* FROM "resumes"  WHERE "resumes"."user_id" = $1  ORDER BY "resumes"."id" ASC LIMIT 1[0m  [["user_id", 11]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 11]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "resumes".* FROM "resumes"  WHERE "resumes"."user_id" = $1  ORDER BY "resumes"."id" ASC LIMIT 1[0m  [["user_id", 11]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 11]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "resumes".* FROM "resumes"  WHERE "resumes"."user_id" = $1  ORDER BY "resumes"."id" ASC LIMIT 1[0m  [["user_id", 11]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 11]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "resumes".* FROM "resumes"  WHERE "resumes"."user_id" = $1  ORDER BY "resumes"."id" ASC LIMIT 1[0m  [["user_id", 11]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 11]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "resumes".* FROM "resumes"  WHERE "resumes"."user_id" = $1  ORDER BY "resumes"."id" ASC LIMIT 1[0m  [["user_id", 11]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 11]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "resumes".* FROM "resumes"  WHERE "resumes"."user_id" = $1  ORDER BY "resumes"."id" ASC LIMIT 1[0m  [["user_id", 11]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 11]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "resumes".* FROM "resumes"  WHERE "resumes"."user_id" = $1  ORDER BY "resumes"."id" ASC LIMIT 1[0m  [["user_id", 11]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 11]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "resumes".* FROM "resumes"  WHERE "resumes"."user_id" = $1  ORDER BY "resumes"."id" ASC LIMIT 1[0m  [["user_id", 11]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 11]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "resumes".* FROM "resumes"  WHERE "resumes"."user_id" = $1  ORDER BY "resumes"."id" ASC LIMIT 1[0m  [["user_id", 11]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 11]]
+  Rendered shared/_sidebar.html.erb (28.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 11]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "resumes".* FROM "resumes"  WHERE "resumes"."user_id" = $1  ORDER BY "resumes"."id" ASC LIMIT 1  [["user_id", 11]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 11]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "resumes".* FROM "resumes"  WHERE "resumes"."user_id" = $1  ORDER BY "resumes"."id" ASC LIMIT 1  [["user_id", 11]]
+  Rendered educations/_form.html.erb (4.0ms)
+  Rendered educations/new.html.erb within layouts/temp (58.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 11]]
+Completed 200 OK in 68ms (Views: 65.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/resumes/3/experiences" for 127.0.0.1 at 2014-04-23 14:54:51 -0300
+Processing by ExperiencesController#index as HTML
+  Parameters: {"resume_id"=>"3"}
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 11]]
+  [1m[36mResume Load (0.0ms)[0m  [1mSELECT  "resumes".* FROM "resumes"  WHERE "resumes"."user_id" = $1  ORDER BY "resumes"."id" ASC LIMIT 1[0m  [["user_id", 11]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 11]]
+  [1m[36mProfile Load (0.0ms)[0m  [1mSELECT  "profiles".* FROM "profiles"  WHERE "profiles"."user_id" = $1  ORDER BY "profiles"."id" ASC LIMIT 1[0m  [["user_id", 11]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 11]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 11]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 11]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "resumes".* FROM "resumes"  WHERE "resumes"."user_id" = $1  ORDER BY "resumes"."id" ASC LIMIT 1[0m  [["user_id", 11]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 11]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "resumes".* FROM "resumes"  WHERE "resumes"."user_id" = $1  ORDER BY "resumes"."id" ASC LIMIT 1[0m  [["user_id", 11]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 11]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "resumes".* FROM "resumes"  WHERE "resumes"."user_id" = $1  ORDER BY "resumes"."id" ASC LIMIT 1[0m  [["user_id", 11]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 11]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "resumes".* FROM "resumes"  WHERE "resumes"."user_id" = $1  ORDER BY "resumes"."id" ASC LIMIT 1[0m  [["user_id", 11]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 11]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "resumes".* FROM "resumes"  WHERE "resumes"."user_id" = $1  ORDER BY "resumes"."id" ASC LIMIT 1[0m  [["user_id", 11]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 11]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "resumes".* FROM "resumes"  WHERE "resumes"."user_id" = $1  ORDER BY "resumes"."id" ASC LIMIT 1[0m  [["user_id", 11]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 11]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "resumes".* FROM "resumes"  WHERE "resumes"."user_id" = $1  ORDER BY "resumes"."id" ASC LIMIT 1[0m  [["user_id", 11]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 11]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "resumes".* FROM "resumes"  WHERE "resumes"."user_id" = $1  ORDER BY "resumes"."id" ASC LIMIT 1[0m  [["user_id", 11]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 11]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "resumes".* FROM "resumes"  WHERE "resumes"."user_id" = $1  ORDER BY "resumes"."id" ASC LIMIT 1[0m  [["user_id", 11]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 11]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "resumes".* FROM "resumes"  WHERE "resumes"."user_id" = $1  ORDER BY "resumes"."id" ASC LIMIT 1[0m  [["user_id", 11]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 11]]
+  Rendered shared/_sidebar.html.erb (43.0ms)
+  [1m[36m (1.0ms)[0m  [1mSELECT COUNT(*) FROM "experiences"  WHERE "experiences"."resume_id" = $1[0m  [["resume_id", 3]]
+  [1m[35mExperience Load (0.0ms)[0m  SELECT "experiences".* FROM "experiences"  WHERE "experiences"."resume_id" = $1  [["resume_id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 11]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "resumes".* FROM "resumes"  WHERE "resumes"."user_id" = $1  ORDER BY "resumes"."id" ASC LIMIT 1  [["user_id", 11]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 11]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "resumes".* FROM "resumes"  WHERE "resumes"."user_id" = $1  ORDER BY "resumes"."id" ASC LIMIT 1  [["user_id", 11]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 11]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "resumes".* FROM "resumes"  WHERE "resumes"."user_id" = $1  ORDER BY "resumes"."id" ASC LIMIT 1  [["user_id", 11]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 11]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "resumes".* FROM "resumes"  WHERE "resumes"."user_id" = $1  ORDER BY "resumes"."id" ASC LIMIT 1  [["user_id", 11]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 11]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "resumes".* FROM "resumes"  WHERE "resumes"."user_id" = $1  ORDER BY "resumes"."id" ASC LIMIT 1  [["user_id", 11]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 11]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "resumes".* FROM "resumes"  WHERE "resumes"."user_id" = $1  ORDER BY "resumes"."id" ASC LIMIT 1  [["user_id", 11]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 11]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "resumes".* FROM "resumes"  WHERE "resumes"."user_id" = $1  ORDER BY "resumes"."id" ASC LIMIT 1  [["user_id", 11]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 11]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "resumes".* FROM "resumes"  WHERE "resumes"."user_id" = $1  ORDER BY "resumes"."id" ASC LIMIT 1  [["user_id", 11]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 11]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "resumes".* FROM "resumes"  WHERE "resumes"."user_id" = $1  ORDER BY "resumes"."id" ASC LIMIT 1  [["user_id", 11]]
+  Rendered experiences/index.html.erb within layouts/temp (86.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 11]]
+Completed 200 OK in 101ms (Views: 94.0ms | ActiveRecord: 2.0ms)

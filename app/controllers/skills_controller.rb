@@ -10,6 +10,7 @@ class SkillsController < ApplicationController
   def create
     skill = Skill.create(skill_param)
     view_context.add_and_save_resume(language)
+    redirect_to resume_skills_path(view_context.current_user.resume.id)
   end
 
   def destroy

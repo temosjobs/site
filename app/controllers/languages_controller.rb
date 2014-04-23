@@ -17,6 +17,7 @@ class LanguagesController < ApplicationController
   def create
     language = Language.create(language_params)
     view_context.add_and_save_resume(language)
+    redirect_to resume_languages_path(view_context.current_user.resume.id)
   end
 
   def update

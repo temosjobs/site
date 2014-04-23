@@ -17,6 +17,7 @@ class EducationsController < ApplicationController
   def create
     education = Education.create(education_params)
     view_context.add_and_save_resume(education)
+    redirect_to resume_educations_path(view_context.current_user.resume.id)
   end
 
   def update
