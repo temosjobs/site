@@ -1,0 +1,41 @@
+<div class="ui segment vertical">
+	<h5 class="ui header">Dados da Empresa</h5>
+	<div class="ui form segment">
+		<div class="field">
+			<label>Nome</label>
+			<input placeholder="Nome" name="company[name]" type="text" value="<%= @company.name %>" />
+		</div>
+		<div class="field">
+			<label>Logo</label>
+			<input name="company[logo]" type="file" />
+		</div>
+		<div class="field">
+			<label>Setor de Atuação</label>
+			<input placeholder="Setor de Atuação" name="company[section_work]" type="text" value="<%= @company.section_work %>" />
+		</div>
+		<div class="field">
+			<label>Tem algo a dizer sobre a sua empresa?</label>
+			<textarea placeholder="Resumo" name="company[description]"><%= @company.description %></textarea>
+		</div>
+		<div class="field">
+			<label>Bairro</label>
+			<input placeholder="Bairro" name="company[neighborhood]" type="text" value="<%= @company.neighborhood %>" />
+		</div>
+		<div class="two fields">
+			<div class="field">
+				<label>Cidade</label>
+				<input placeholder="Cidade" name="company[city]" type="text" value="<%= @company.city %>" />
+			</div>
+			<div class="field">
+				<label>Estado</label>
+				<input placeholder="Estado" name="company[state]" type="text" value="<%= @company.state %>" />
+			</div>
+		</div>
+		
+		
+		<div class="field alignright">
+			<a href="<%= (!current_user.company.present?) ? new_user_company_path(current_user.id) : edit_user_company_path(current_user.id,current_user.company.id) %>" class="ui red submit button">Cancelar</a>
+			<input type="submit" class="ui blue submit button" value="Salvar" />
+		</div>
+	</div>
+</div>

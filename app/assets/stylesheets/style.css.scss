@@ -1,0 +1,50 @@
+a{
+	text-decoration: none;
+	color: #000;
+
+}
+
+.centered {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-top: -94px;
+  margin-left: -300px;
+}
+
+#home{
+	width: 980px;
+	margin: 20px auto;
+}
+
+.small{
+	font-size: 11px;
+}
+
+.overflowhidden{
+	overflow:hidden;
+}
+
+.displayblock{
+	display:block !important;
+}
+
+.floatleft{
+	float:left;
+}
+
+.floatrigth{
+	float: right;
+}
+
+.paddingleft30px{
+	padding-left: 30px !important;
+}
+
+.alignright{
+	text-align: right;
+}
+
+.marginbottom10px{
+	margin-bottom: 10px !important;
+}

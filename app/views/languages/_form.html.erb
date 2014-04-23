@@ -1,0 +1,29 @@
+<div class="ui segment vertical">
+	<h5 class="ui header">Idioma</h5>
+	<div class="ui form segment">
+		<div class="two fields">
+			<div class="field">
+				<label>Idioma</label>
+				<input placeholder="Idioma" name="language[name]" type="text" value="<%= @language.name %>" />
+			</div>
+			<div class="field">
+				<label>Nível</label>
+				<div class="ui fluid selection dropdown">
+					<div class="text"><%= (!@language.level.nil?) ? @language.level : "Nível" %></div>
+					<i class="dropdown icon"></i>
+					<input type="hidden" name="language[level]" />
+					<div class="menu">
+						<div class="item" data-value="Básico">Básico</div>
+						<div class="item" data-value="Intermediário">Intermediário</div>
+						<div class="item" data-value="Avançado">Avançado</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="field alignright">
+			<a href="<%= resume_languages_path(current_user.resume.id) %>" class="ui red submit button">Cancelar</a>
+			<input type="submit" class="ui blue submit button" value="Salvar" />
+		</div>
+	</div>
+</div>

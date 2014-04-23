@@ -1,0 +1,51 @@
+<div class="ui grid overflowhidden">
+	<div class="wide displayblock floatleft three column">
+		<%= render 'shared/sidebar' %>
+	</div>
+	
+	<div class="wide twelve floatrigth paddingleft30px column">
+		<% if @experiences.size > 0 %>
+			<h5 class="ui header">Experiência</h5>
+
+			<% @experiences.each do |experience| %>
+				<div>
+					<h6 class="ui teal header">
+						<%= experience.title %>
+						
+						<div class="floatrigth">
+							<a href="<%= edit_resume_experience_path(current_user.resume.id, experience.id) %>"><i class="edit green icon"></i></a>
+							<a href="<%= resume_experience_path(current_user.resume.id, experience.id) %>"  data-method="delete" rel="nofollow"><i class="remove red icon"></i></a>
+						</div>
+
+						<div class="sub header"><%= experience.company_name %> - <%= experience.location %></div>
+					</h6>
+					Periodo:
+					<p>
+						<% if !experience.start_date.nil? %>
+							<%= experience.start_date.strftime("%d/%m/%Y") %> 
+						<% end %>
+
+						<% if !experience.end_date.nil? %>
+							 - <%= experience.end_date.strftime("%d/%m/%Y") %> 
+						<% end %>
+
+						<% if experience.is_current_job.present? %>
+							Este é seu emprego atual :) 
+						<% end %>
+					</p>
+					
+					<p>
+						<%= experience.description %>
+					</p>
+				</div>
+				<div class="ui horizontal divider">
+					♠
+				</div>
+			<% end %>
+			<a href="<%= new_resume_experience_path(current_user.resume.id) %>" class="ui displayblock wide column twelve teal button">Adicionar Experiência</a>
+		<% else %>
+			<h5 class="ui header">Você ainda não cadastrou nenhuma experiência.</h5>
+			<a href="<%= new_resume_experience_path(current_user.resume.id) %>" class="ui displayblock wide column twelve teal button">Adicionar Experiência</a>
+		<% end %>
+	</div>
+</div>

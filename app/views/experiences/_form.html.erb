@@ -1,0 +1,43 @@
+<div class="ui segment vertical">
+	<h5 class="ui header">Experiência</h5>
+	<div class="ui form segment">
+		<div class="field">
+			<label>Empresa</label>
+			<input placeholder="Empresa" name="experience[company_name]" type="text" value="<%= @experience.company_name %>" />
+		</div>
+		<div class="field">
+			<label>Cargo</label>
+			<input placeholder="Cargo" name="experience[title]" type="text" value="<%= @experience.title %>" />
+		</div>
+		<div class="field">
+			<label>Local</label>
+			<input placeholder="Local" name="experience[location]" type="text" value="<%= @experience.location %>" />
+		</div>
+		<div class="two fields">
+			<div class="field date">
+				<label>Inicio</label>
+				<input placeholder="Inicio" name="experience[start_date]" type="text" value="<%= @experience.start_date %>" />
+			</div>
+			<div class="field date">
+				<label>Fim</label>
+				<input placeholder="Fim" name="experience[end_date]" type="text" value="<%= @experience.end_date %>" />
+			</div>
+		</div>
+		<div class="field">
+			<label>
+				<input name="experience[is_current_job]" type="checkbox" value="1" <%= (@experience.is_current_job) ? "checked='checked'" : "" %> />
+				Este é meu emprego atual
+			</label>
+		</div>
+		<div class="field">
+			<label>Tem algo a dizer sobre o seu trabalho nesta empresa?</label>
+				<textarea placeholder="Resumo" name="experience[description]"><%= @experience.description %></textarea>
+			</div>
+		</div>
+		
+		<div class="field alignright">
+			<a href="<%= resume_experiences_path(current_user.resume.id) %>" class="ui red submit button">Cancelar</a>
+			<input type="submit" class="ui blue submit button" value="Salvar" />
+		</div>
+	</div>
+</div>

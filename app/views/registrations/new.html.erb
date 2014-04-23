@@ -1,0 +1,52 @@
+<h4 class="ui inverted red block header">
+	Crie uma conta
+</h4>
+
+<% if flash.present? %>
+	<div class="ui tertiary inverted green segment">
+		<% flash.each do |name, msg| -%>
+			<%= content_tag :div, msg, class: name %>
+		<% end -%>
+	</div>
+<% end %>
+
+<div class="ui">
+	<div class="column">
+		<form method="post" action="<%= registrations_path %>">
+			<input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>" />
+			<div class="ui fluid form segment">
+				<h3 class="ui header">Cadastre-se</h3>
+				<div class="two fields">
+					<div class="field">
+						<label>Nome</label>
+						<input placeholder="Nome" type="text" name="profile[first_name]" />
+					</div>
+					<div class="field">
+						<label>Sobrenome</label>
+						<input placeholder="Sobrenome" type="text" name="profile[last_name]" />
+					</div>
+				</div>
+				<div class="field">
+					<label>E-mail</label>
+					<input placeholder="E-mail" type="text" name="user[email]" />
+				</div>
+				<div class="field">
+					<label>Senha</label>
+					<input type="password" placeholder="Senha" name="user[password]" />
+				</div>
+				<div class="field">
+					<label>Quero me cadastrar como</label>
+					<input type="radio" name="user[recipe]" value="candidate" />Candidato
+					<input type="radio" name="user[recipe]" value="enterprise" />Empresa
+				</div>
+				<div class="inline field">
+					<p>Ao clicar em Cadastre-se agora, você estará concordando com o Contrato do Usuário, a Política de Privacidade e a Política de Cookies.</p>
+				</div>
+				<input type="submit" class="ui blue submit button" value="Enviar" />
+			</div>
+		</form>
+	</div>
+	<br />
+	Já tem cadastro?
+	<a href="<%= new_session_path %>" class="ui teal button">Faça Login</a>
+</div>

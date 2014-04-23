@@ -1,0 +1,11 @@
+<div class="ui grid overflowhidden">
+	<div class="wide displayblock floatleft three column">
+		<%= render 'shared/sidebar' %>
+	</div>
+	
+	<div class="wide twelve floatrigth paddingleft30px column">
+		<%= form_tag([current_user, @company], :method=>'post', :multipart => true)  %>
+			<%= render 'form' %>
+		</form>
+	</div>
+</div>

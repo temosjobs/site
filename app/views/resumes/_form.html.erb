@@ -1,0 +1,30 @@
+<div class="ui segment vertical">
+	<h5 class="ui header">Dados Básicos</h5>
+	<div class="ui form segment">
+		<div class="field">
+			<label>Título</label>
+			<input placeholder="Nome" name="resume[title]" type="text" value="<%= @resume.title %>" />
+		</div>
+		<div class="field">
+			<label>Setor de Atuação</label>
+			<input placeholder="Nome" name="resume[section_work]" type="text" value="<%= @resume.section_work %>" />
+		</div>
+		<div class="field">
+			<label>Resumo</label>
+			<textarea placeholder="Resumo" name="resume[description]"><%= @resume.description %></textarea>
+		</div>
+		<div class="field">
+			<label>Você deseja que seu currículo apareça nos resultados de busca?</label>
+			<input name="resume[show_in_search]" type="radio" value="1" <%= (@resume.show_in_search) ? "checked='checked'" : "" %> /> Sim
+			<input name="resume[show_in_search]" type="radio" value="0" <%= (!@resume.show_in_search) ? "checked='checked'" : "" %> /> Não
+		</div>
+		<div class="field">
+			<label>Você deseja deixar seu currículo publico, deixando pessoas não cadastradas visualizar seu currículo?</label>
+			<input name="resume[is_public_link]" type="radio" value="1" <%= (@resume.is_public_link) ? "checked='checked'" : "" %> /> Sim
+			<input name="resume[is_public_link]" type="radio" value="0" <%= (!@resume.is_public_link) ? "checked='checked'" : "" %> /> Não
+		</div>
+		<div class="field alignright">
+			<input type="submit" class="ui blue submit button" value="Salvar" />
+		</div>
+	</div>
+</div>

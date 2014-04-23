@@ -1,0 +1,37 @@
+<div class="ui grid overflowhidden">
+	<div class="wide displayblock floatleft three column">
+		<%= render 'shared/sidebar' %>
+	</div>
+	
+	<div class="wide twelve floatrigth paddingleft30px column">
+		<h5 class="ui header">Habilidades</h5>
+
+		<% if @skills.size == 0 %>
+			<h5 class="ui header">Você ainda não cadastrou nenhuma habilidade.</h5>
+		<% end %>
+		
+		<%= form_tag([current_user.resume, @skill], :method=>'post', :multipart => true)  %>
+			<div class="ui form ">
+				<div class="two fields">
+					<div class="field">
+						<label>Habilidade</label>
+						<input placeholder="Habilidade" name="skill[name]" type="text"  />
+					</div>
+					<div class="field">
+						<label>&nbsp;</label>
+						<input type="submit" class="ui blue submit button" value="Salvar" />
+					</div>
+				</div>
+			</div>
+		</form>
+		
+
+		<% @skills.each do |skill| %>				
+			<div class="ui marginbottom10px orange label">
+				<%= skill.name %>
+				<a href="<%= resume_skill_path(current_user.resume.id, skill.id) %>"  data-method="delete" rel="nofollow"><i class="delete  icon"></i></a>
+			</div>
+		<% end %>
+		
+	</div>
+</div>

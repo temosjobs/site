@@ -1,0 +1,33 @@
+<div class="ui grid overflowhidden">
+	<div class="wide displayblock floatleft three column">
+		<%= render 'shared/sidebar' %>
+	</div>
+	
+	<div class="wide twelve floatrigth paddingleft30px column">
+		<% if @languages.size > 0 %>
+			<h5 class="ui header">Idiomas</h5>
+
+			<% @languages.each do |language| %>
+				<div>
+					<h6 class="ui teal header">
+						<%= language.name %>
+						
+						<div class="floatrigth">
+							<a href="<%= edit_resume_language_path(current_user.resume.id, language.id) %>"><i class="edit green icon"></i></a>
+							<a href="<%= resume_language_path(current_user.resume.id, language.id) %>"  data-method="delete" rel="nofollow"><i class="remove red icon"></i></a>
+						</div>
+
+						<div class="sub header"><%= language.level %></div>
+					</h6>
+				</div>
+				<div class="ui horizontal divider">
+					♠
+				</div>
+			<% end %>
+			<a href="<%= new_resume_language_path(current_user.resume.id) %>" class="ui displayblock wide column twelve teal button">Adicionar Idioma</a>
+		<% else %>
+			<h5 class="ui header">Você ainda não cadastrou nenhum idioma.</h5>
+			<a href="<%= new_resume_language_path(current_user.resume.id) %>" class="ui displayblock wide column twelve teal button">Adicionar Idioma</a>
+		<% end %>
+	</div>
+</div>

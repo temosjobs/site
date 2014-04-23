@@ -1,0 +1,19 @@
+default: &default
+  host: localhost
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+  username: postgres
+  password: k1ller
+
+development:
+  <<: *default
+  database: temosjob_development
+
+test:
+  <<: *default
+  database: temosjob_test
+
+production:
+  <<: *default
+  database: temosjob_production

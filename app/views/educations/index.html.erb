@@ -1,0 +1,47 @@
+<div class="ui grid overflowhidden">
+	<div class="wide displayblock floatleft three column">
+		<%= render 'shared/sidebar' %>
+	</div>
+	
+	<div class="wide twelve floatrigth paddingleft30px column">
+		<% if @educations.size > 0 %>
+			<h5 class="ui header">Formação</h5>
+
+			<% @educations.each do |education| %>
+				<div>
+					<h6 class="ui teal header">
+						<%= education.institution %>
+						
+						<div class="floatrigth">
+							<a href="<%= edit_resume_education_path(current_user.resume.id, education.id) %>"><i class="edit green icon"></i></a>
+							<a href="<%= resume_education_path(current_user.resume.id, education.id) %>"  data-method="delete" rel="nofollow"><i class="remove red icon"></i></a>
+						</div>
+
+						<div class="sub header"><%= education.formation %> - <%= education.course %></div>
+					</h6>
+					Periodo:
+					<p>
+						<% if !education.start_year.nil? %>
+							<%= education.start_year %> 
+						<% end %>
+
+						<% if !education.end_year.nil? %>
+							 - <%= education.end_year %> 
+						<% end %>
+					</p>
+
+					<p>
+						<%= education.description %>
+					</p>
+				</div>
+				<div class="ui horizontal divider">
+					♠
+				</div>
+			<% end %>
+			<a href="<%= new_resume_education_path(current_user.resume.id) %>" class="ui displayblock wide column twelve teal button">Adicionar Formação</a>
+		<% else %>
+			<h5 class="ui header">Você ainda não cadastrou nenhuma formação.</h5>
+			<a href="<%= new_resume_education_path(current_user.resume.id) %>" class="ui displayblock wide column twelve teal button">Adicionar Formação</a>
+		<% end %>
+	</div>
+</div>

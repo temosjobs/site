@@ -1,0 +1,37 @@
+<div class="ui segment vertical">
+	<h5 class="ui header">Formação</h5>
+	<div class="ui form segment">
+		<div class="field">
+			<label>Instituição</label>
+			<input placeholder="Instituição" name="education[institution]" type="text" value="<%= @education.institution %>" />
+		</div>
+		<div class="field">
+			<label>Formação</label>
+			<input placeholder="Formação" name="education[formation]" type="text" value="<%= @education.formation %>" />
+		</div>
+		<div class="field">
+			<label>Curso</label>
+			<input placeholder="Curso" name="education[course]" type="text" value="<%= @education.course %>" />
+		</div>
+		<div class="two fields">
+			<div class="field date">
+				<label>Ano de inicio</label>
+				<input placeholder="Ano de inicio" name="education[start_year]" type="text" value="<%= @education.start_year %>" />
+			</div>
+			<div class="field date">
+				<label>Ano de conclusão</label>
+				<input placeholder="Ano de conclusão" name="education[end_year]" type="text" value="<%= @education.end_year %>" />
+			</div>
+		</div>
+		<div class="field">
+			<label>Tem algo a dizer sobre o seu curso nesta instituição?</label>
+				<textarea placeholder="Resumo" name="education[description]"><%= @education.description %></textarea>
+			</div>
+		</div>
+		
+		<div class="field alignright">
+			<a href="<%= resume_educations_path(current_user.resume.id) %>" class="ui red submit button">Cancelar</a>
+			<input type="submit" class="ui blue submit button" value="Salvar" />
+		</div>
+	</div>
+</div>

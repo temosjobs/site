@@ -1,0 +1,96 @@
+<div class="ui grid overflowhidden">
+	<div class="wide displayblock floatleft three column">
+		<%= render 'shared/sidebar' %>
+	</div>
+	
+	<div class="wide twelve floatrigth paddingleft30px column">
+		<%= form_tag(@profile, :method=>'patch', :multipart => true)  %>
+			<div class="ui segment vertical">
+				<h5 class="ui header">Dados Pessoais</h5>
+				<div class="ui form segment">
+					<div class="field">
+						<label>Nome</label>
+						<input placeholder="Nome" name="profile[first_name]" type="text" value="<%= @profile.first_name %>" />
+					</div>
+
+					<div class="field">
+						<label>Sobrenome</label>
+						<input placeholder="Sobrenome" name="profile[last_name]" type="text" value="<%= @profile.last_name %>" />
+					</div>
+
+					<div class="field">
+						<label>Sexo</label>
+						<div class="field">
+							<div class="ui radio checkbox">
+								<input id="choice-1" type="radio" name="profile[gender]" value="male" <%= @profile.gender.present? ? (@profile.gender == "male") ? 'checked="checked"' : "" : ""  %> />
+								<label for="choice-1">Masculino</label>
+							</div>
+							<div class="ui radio checkbox">
+								<input id="choice-2" type="radio" name="profile[gender]" value="female" <%= @profile.gender.present? ? (@profile.gender == "female") ? 'checked="checked"' : "" : ""  %> />
+								<label for="choice-2">Feminino</label>
+							</div>
+						</div>
+					</div>
+
+					<div class="field date">
+						<label>Nascimento</label>
+						<input placeholder="Nascimento" name="profile[birth]" type="text" value="<%= @profile.birth.present? ? @profile.birth.strftime("%d/%m/%Y") : ""  %>" />
+					</div>
+
+					<div class="field">
+						<label>Site</label>
+						<input placeholder="Site" name="profile[website]" type="url" value="<%= @profile.website %>" />
+					</div>
+				</div>
+				<h5 class="ui header">Dados de Endereço</h5>
+				<div class="ui form segment">
+					<div class="field">
+						<label>Endereço</label>
+						<input placeholder="Endereço" name="profile[street]" type="text" value="<%= @profile.street %>" />
+					</div>
+					<div class="field">
+						<label>Número</label>
+						<input placeholder="Número" name="profile[number]" type="text" value="<%= @profile.number %>" />
+					</div>
+					<div class="field">
+						<label>Complemento</label>
+						<input placeholder="Complemento" name="profile[complement]" type="text" value="<%= @profile.complement %>" />
+					</div>
+					<div class="field">
+						<label>Bairro</label>
+						<input placeholder="Bairro" name="profile[neighborhood]" type="text" value="<%= @profile.neighborhood %>" />
+					</div>
+					<div class="two fields">
+						<div class="field">
+							<label>Cidade</label>
+							<input placeholder="Cidade" name="profile[city]" type="text" value="<%= @profile.city %>" />
+						</div>
+						<div class="field">
+							<label>Estado</label>
+							<input placeholder="Estado" name="profile[state]" type="text" value="<%= @profile.state %>" />
+						</div>
+					</div>
+				</div>
+
+				<div class="field alignright">
+					<input type="submit" class="ui blue submit button" value="Salvar" />
+				</div>
+			</div>
+		</form>
+	</div>
+</div>
+
+
+
+
+
+<!-- 
+
+profiles[linkedin_url]
+profiles[github_url]
+profiles[facebook_id]
+profiles[google_id]
+profiles[is_newsletter]
+profiles[is_terms] 
+
+-->

@@ -1,0 +1,93 @@
+<div class="ui vertical menu">
+	<div class="header item">
+		<i class="user icon"></i>
+		Dados Pessoais
+	</div>
+	<a href="<%= edit_profile_path(current_user.profile.id) %>" class="item">
+		Perfil
+	</a>
+	<% if is_enterprise? %>
+	<a href="<%= (!current_user.company.present?) ? new_user_company_path(current_user.id) : edit_user_company_path(current_user.id,current_user.company.id) %>" class="item">
+		Dados da empresa
+	</a>
+	<% end %>
+	<a class="item">
+		Configurações da conta
+	</a>
+	<a class="item">
+		Emails
+	</a>
+	<a class="item">
+		Notificações
+	</a>
+	<!-- Candidato -->
+	<% if is_candidate? %>
+		<div class="header item">
+			<i class="book icon"></i>
+			Currículo
+		</div>
+		<a href="<%= (!current_user.resume.present?) ? new_resume_path : edit_resume_path(current_user.resume.id) %>" class="item">
+			Informações básicas
+		</a>
+		<a href="<%= (!current_user.resume.present?) ? new_resume_path : resume_experiences_path(current_user.resume.id) %>" class="item">
+			Experiência
+		</a>
+		<a href="<%= (!current_user.resume.present?) ? new_resume_path : resume_educations_path(current_user.resume.id) %>" class="item">
+			Formação
+		</a>
+		<a href="<%= (!current_user.resume.present?) ? new_resume_path : resume_skills_path(current_user.resume.id) %>" class="item">
+			Habilidades
+		</a>
+		<a href="<%= (!current_user.resume.present?) ? new_resume_path : resume_languages_path(current_user.resume.id) %>" class="item">
+			Idiomas
+		</a>
+		<div class="header item">
+			<i class="book icon"></i>
+			Vagas
+		</div>
+		<a class="item">
+			Favoritas
+		</a>
+		<a class="item">
+			Me Candidatei
+		</a>
+		<a class="item">
+			Buscar
+		</a>
+	<% end %>
+	<!-- /Candidato -->
+	<!-- Empresa -->
+	<% if is_enterprise? %>
+		<div class="header item">
+			<i class="book icon"></i>
+			Vagas
+		</div>
+		<a class="item">
+			Cadastradas
+		</a>
+		<a class="item">
+			Adicionar
+		</a>
+		<a class="item">
+			Estatisticas
+		</a>
+		<div class="header item">
+			<i class="book icon"></i>
+			Currículos
+		</div>
+		<a class="item">
+			Favoritos
+		</a>
+		<a class="item">
+			Buscar
+		</a>
+	<% end %>
+	<!-- /Empresa -->
+	<div class="header item">
+		<i class="book icon"></i>
+		&nbsp;
+	</div>
+	<a href="/sessions/destroy" data-method="delete" rel="nofollow" class="item">
+		Sair
+	</a>
+</div>
