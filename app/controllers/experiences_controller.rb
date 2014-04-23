@@ -16,9 +16,7 @@ class ExperiencesController < ApplicationController
 
   def create
     experience = Experience.create(experience_params)
-    experience.resume = view_context.current_user.resume
-    experience.save
-    redirect_to resume_experiences_path(view_context.current_user.resume.id)
+    view_context.add_and_save_resume(experience)
   end
 
   def update
